@@ -9,19 +9,33 @@
 /* Begin PBXBuildFile section */
 		840385BA2F34F08E00245237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385B92F34F08E00245237 /* AppDelegate.swift */; };
 		840385BC2F34F08E00245237 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385BB2F34F08E00245237 /* SceneDelegate.swift */; };
-		840385BE2F34F08E00245237 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385BD2F34F08E00245237 /* ViewController.swift */; };
+		840385BE2F34F08E00245237 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385BD2F34F08E00245237 /* HomeViewController.swift */; };
 		840385C32F34F09100245237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840385C22F34F09100245237 /* Assets.xcassets */; };
 		840385C62F34F09100245237 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840385C42F34F09100245237 /* LaunchScreen.storyboard */; };
+		840385D52F3890D000245237 /* AppRouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385D42F3890D000245237 /* AppRouterProtocols.swift */; };
+		840385D72F38912900245237 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385D62F38912900245237 /* AppRouter.swift */; };
+		840385D92F38923700245237 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385D82F38923700245237 /* HomeProtocols.swift */; };
+		840385DB2F3892DA00245237 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385DA2F3892DA00245237 /* Product.swift */; };
+		840385DD2F38932B00245237 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385DC2F38932B00245237 /* HomeRouter.swift */; };
+		840385DF2F38938100245237 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385DE2F38938100245237 /* HomeInteractor.swift */; };
+		840385E12F38945800245237 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840385E02F38945800245237 /* HomePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		840385B62F34F08E00245237 /* RedBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840385B92F34F08E00245237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840385BB2F34F08E00245237 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		840385BD2F34F08E00245237 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		840385BD2F34F08E00245237 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		840385C22F34F09100245237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840385C52F34F09100245237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840385C72F34F09100245237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840385D42F3890D000245237 /* AppRouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterProtocols.swift; sourceTree = "<group>"; };
+		840385D62F38912900245237 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		840385D82F38923700245237 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		840385DA2F3892DA00245237 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		840385DC2F38932B00245237 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		840385DE2F38938100245237 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		840385E02F38945800245237 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,85 @@
 		840385B82F34F08E00245237 /* RedBox */ = {
 			isa = PBXGroup;
 			children = (
-				840385B92F34F08E00245237 /* AppDelegate.swift */,
-				840385BB2F34F08E00245237 /* SceneDelegate.swift */,
-				840385BD2F34F08E00245237 /* ViewController.swift */,
-				840385C22F34F09100245237 /* Assets.xcassets */,
-				840385C42F34F09100245237 /* LaunchScreen.storyboard */,
+				840385CD2F38900E00245237 /* Applications */,
+				840385D32F38905C00245237 /* Protocols */,
+				840385D12F38903B00245237 /* Routers */,
+				840385D02F38903200245237 /* Interactors */,
+				840385CF2F38902800245237 /* Presenters */,
+				840385CE2F38902000245237 /* Views */,
+				840385D22F38904E00245237 /* Entities */,
+				840385E22F389D4000245237 /* Resources */,
 				840385C72F34F09100245237 /* Info.plist */,
 			);
 			path = RedBox;
+			sourceTree = "<group>";
+		};
+		840385CD2F38900E00245237 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				840385B92F34F08E00245237 /* AppDelegate.swift */,
+				840385BB2F34F08E00245237 /* SceneDelegate.swift */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		840385CE2F38902000245237 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				840385BD2F34F08E00245237 /* HomeViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		840385CF2F38902800245237 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				840385E02F38945800245237 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		840385D02F38903200245237 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				840385DE2F38938100245237 /* HomeInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		840385D12F38903B00245237 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				840385D62F38912900245237 /* AppRouter.swift */,
+				840385DC2F38932B00245237 /* HomeRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		840385D22F38904E00245237 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				840385DA2F3892DA00245237 /* Product.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		840385D32F38905C00245237 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				840385D42F3890D000245237 /* AppRouterProtocols.swift */,
+				840385D82F38923700245237 /* HomeProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		840385E22F389D4000245237 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				840385C22F34F09100245237 /* Assets.xcassets */,
+				840385C42F34F09100245237 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +219,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840385BE2F34F08E00245237 /* ViewController.swift in Sources */,
+				840385BE2F34F08E00245237 /* HomeViewController.swift in Sources */,
 				840385BA2F34F08E00245237 /* AppDelegate.swift in Sources */,
+				840385D52F3890D000245237 /* AppRouterProtocols.swift in Sources */,
+				840385E12F38945800245237 /* HomePresenter.swift in Sources */,
+				840385D72F38912900245237 /* AppRouter.swift in Sources */,
+				840385D92F38923700245237 /* HomeProtocols.swift in Sources */,
+				840385DD2F38932B00245237 /* HomeRouter.swift in Sources */,
+				840385DF2F38938100245237 /* HomeInteractor.swift in Sources */,
 				840385BC2F34F08E00245237 /* SceneDelegate.swift in Sources */,
+				840385DB2F3892DA00245237 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
