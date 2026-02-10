@@ -21,5 +21,8 @@ final class HomeRouter: HomeRouterProtocol {
         return UINavigationController(rootViewController: view)
     }
     
-    func showDetails(of product: Product) { }
+    func showDetails(of product: Product) {
+        let detailVC = DetailViewController()
+        viewController?.navigationController?.present(detailVC, animated: true)
+    }
 }
