@@ -2,7 +2,7 @@ import UIKit
 
 final class HorizontalHomeCell: UICollectionViewCell {
     private lazy var stackView: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [imageView, titleLabel, priceLabel])
+        let stack = UIStackView(arrangedSubviews: [titleLabel, priceLabel])
         stack.axis = .vertical
         stack.spacing = 6
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -12,21 +12,22 @@ final class HorizontalHomeCell: UICollectionViewCell {
     private let imageView: UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleAspectFit
+        image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
-        label.configureStyle(font: Typography.smallBold.font)
+        label.configureStyle(font: Typography.regular.font, textColor: .ypDarkGray)
         return label
     }()
     
-    private lazy var priceLabel: UILabel = {
+    private let priceLabel: UILabel = {
         let label = UILabel()
-        label.configureStyle(font: Typography.light.font, textColor: .ypDarkGray)
+        label.configureStyle(font: Typography.bold.font)
         return label
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -53,18 +54,21 @@ private extension HorizontalHomeCell {
         contentView.clipsToBounds = true
         contentView.layer.cornerRadius = 50
         contentView.backgroundColor = .ypLight
+        contentView.addSubview(imageView)
         contentView.addSubview(stackView)
     }
     
     func setupContraints() {
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 38),
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 48),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 18),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -18),
+            imageView.heightAnchor.constraint(equalToConstant: 210),
+            
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 22),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 18),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -18),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -38),
-            
-            imageView.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 230),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32),
             
             titleLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),

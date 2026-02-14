@@ -7,22 +7,21 @@ final class HomeRouter: HomeRouterProtocol {
         let view = HomeViewController()
         let interactor = HomeInteractor()
         let router = HomeRouter()
-        let presenter = HomePresenter(interactor: interactor, router: router)
+        let presenter = HomePresenter(view: view, interactor: interactor, router: router)
         
         view.presenter = presenter
-        presenter.view = view
         router.viewController = view
         
         view.tabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(systemName: "house.fill"),
+            image: UIImage(systemName: Constants.Image.homeTabBarIcon),
             tag: 0)
         
         return UINavigationController(rootViewController: view)
     }
     
-    func showDetails(of product: Product) {
-        let detailVC = DetailViewController()
+    func showDetails(of product: ProductDTO) {
+        let detailVC = DetailRouter.createModule(with: product)
         viewController?.navigationController?.present(detailVC, animated: true)
     }
 }

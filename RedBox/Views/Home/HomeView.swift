@@ -14,7 +14,7 @@ final class HomeView: UIView {
         return collection
     }()
     
-    private lazy var scrollView: UIScrollView = {
+    private let scrollView: UIScrollView = {
         let scroll = UIScrollView()
         scroll.showsVerticalScrollIndicator = false
         scroll.showsHorizontalScrollIndicator = false
@@ -23,7 +23,7 @@ final class HomeView: UIView {
         return scroll
     }()
     
-    private lazy var contentView: UIView = {
+    private let contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

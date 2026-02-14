@@ -12,7 +12,7 @@ enum Typography {
         case .title: return UIFont.systemFont(ofSize: 36, weight: .heavy)
         case .bold: return UIFont.systemFont(ofSize: 26, weight: .heavy)
         case .smallBold: return UIFont.systemFont(ofSize: 20, weight: .heavy)
-        case .regular: return UIFont.systemFont(ofSize: 20, weight: .regular)
+        case .regular: return UIFont.systemFont(ofSize: 18, weight: .regular)
         case .light: return UIFont.systemFont(ofSize: 16, weight: .light)
         }
     }

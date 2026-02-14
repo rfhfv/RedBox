@@ -1,11 +1,17 @@
 final class HomeInteractor: HomeInteractorProtocol {
-    func getProducts() -> [Product] {
-        return [
-            Product(image: "Airpods", title: "AirPods Max", price: "$549"),
-            Product(image: "Airpods", title: "AirPods Max", price: "$549"),
-            Product(image: "Airpods", title: "AirPods Max", price: "$549"),
-            Product(image: "Airpods", title: "AirPods Max", price: "$549"),
-            Product(image: "Airpods", title: "AirPods Max", price: "$549"),
-        ]
+    private var products: [ProductDTO] = []
+    
+    func fetchProducts(completion: @escaping ([ProductDTO]) -> Void) {
+        let products = HeadphoneModel.allCases.map { ProductDTO(from: $0) }
+        self.products = products
+        completion(products)
+    }
+    
+    func getProductsCount() -> Int {
+        return products.count
+    }
+    
+    func getProduct(at index: Int) -> ProductDTO {
+        return products[index]
     }
 }

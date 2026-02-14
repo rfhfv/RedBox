@@ -3,7 +3,8 @@ final class HomePresenter: HomePresenterProtocol {
     let interactor: HomeInteractorProtocol
     let router: HomeRouterProtocol
     
-    init(interactor: HomeInteractorProtocol, router: HomeRouterProtocol) {
+    init(view: HomeViewProtocol, interactor: HomeInteractorProtocol, router: HomeRouterProtocol) {
+        self.view = view
         self.interactor = interactor
         self.router = router
     }
@@ -12,12 +13,24 @@ final class HomePresenter: HomePresenterProtocol {
         displayProducts()
     }
     
-    func didTapProduct(_ product: Product) {
+    func didTapProduct(at index: Int) {
+        let product = interactor.getProduct(at: index)
         router.showDetails(of: product)
     }
     
-    private func displayProducts() {
-        let products = interactor.getProducts()
-        view?.showProducts(products)
+    func getProductsCount() -> Int {
+        return interactor.getProductsCount()
+    }
+    
+    func getProduct(at index: Int) -> ProductDTO? {
+        return interactor.getProduct(at: index)
+    }
+}
+
+private extension HomePresenter {
+    func displayProducts() {
+        interactor.fetchProducts { [weak self] products in
+            self?.view?.showProducts(products)
+        }
     }
 }

@@ -3,10 +3,8 @@ import UIKit
 class HomeViewController: UIViewController {
     private lazy var homeView = HomeView()
     var presenter: HomePresenterProtocol?
-    private var products: [Product] = []
     
     override func loadView() {
-        super.loadView()
         view = homeView
     }
     
@@ -63,8 +61,7 @@ private extension HomeViewController {
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func showProducts(_ products: [Product]) {
-        self.products = products
+    func showProducts(_ products: [ProductDTO]) {
         homeView.collectionView.reloadData()
     }
 }
@@ -76,22 +73,26 @@ extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
-            return products.count
+            return presenter?.getProductsCount() ?? 0
         } else {
-            return products.count
+            return presenter?.getProductsCount() ?? 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cell.horizontalHomeCellIdentifier, for: indexPath) as? HorizontalHomeCell else { return UICollectionViewCell() }
-            let product = products[indexPath.item]
-            cell.configureHomeCell(image: product.image, title: product.title, price: product.price)
+            guard  let product = presenter?.getProduct(at: indexPath.row) else {
+                return UICollectionViewCell()
+            }
+            cell.configureHomeCell(image: product.imageName, title: product.title, price: product.formattedPrice)
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Cell.verticalHomeCellIdentifier, for: indexPath) as? VerticalHomeCell else { return UICollectionViewCell() }
-            let product = products[indexPath.item]
-            cell.configureHomeCell(image: product.image, title: product.title, price: product.price)
+            guard  let product = presenter?.getProduct(at: indexPath.row) else {
+                return UICollectionViewCell()
+            }
+            cell.configureHomeCell(image: product.imageName, title: product.title, price: product.formattedPrice)
             return cell
         }
     }
@@ -112,13 +113,6 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
-        if indexPath.section == 0 {
-            let product = products[indexPath.item]
-            presenter?.didTapProduct(product)
-        } else {
-            let product = products[indexPath.item]
-            presenter?.didTapProduct(product)
-        }
+        presenter?.didTapProduct(at: indexPath.row)
     }
 }
