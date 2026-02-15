@@ -26,6 +26,14 @@
 		842726B42F3D16C10059E178 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726B32F3D16C10059E178 /* DetailRouter.swift */; };
 		842726B72F3F231E0059E178 /* HeaderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726B62F3F231E0059E178 /* HeaderDetailCell.swift */; };
 		842726B92F3F23410059E178 /* DescriptionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726B82F3F23410059E178 /* DescriptionDetailCell.swift */; };
+		842726C12F41653B0059E178 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726C02F41653B0059E178 /* HomePresenterTests.swift */; };
+		842726CA2F4179520059E178 /* MockHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726C92F4179520059E178 /* MockHomeInteractor.swift */; };
+		842726CC2F4179990059E178 /* MockHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726CB2F4179990059E178 /* MockHomeView.swift */; };
+		842726CE2F4179B30059E178 /* MockHomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726CD2F4179B30059E178 /* MockHomeRouter.swift */; };
+		842726D22F417A110059E178 /* MockDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726D12F417A110059E178 /* MockDetailInteractor.swift */; };
+		842726D42F417A340059E178 /* MockDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726D32F417A340059E178 /* MockDetailView.swift */; };
+		842726D62F417A510059E178 /* MockDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726D52F417A510059E178 /* MockDetailRouter.swift */; };
+		842726D82F417A680059E178 /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726D72F417A680059E178 /* DetailPresenterTests.swift */; };
 		849921712F39831C00EC59DB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849921702F39831C00EC59DB /* HomeView.swift */; };
 		849921742F39837000EC59DB /* VerticalHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849921732F39837000EC59DB /* VerticalHomeCell.swift */; };
 		849921772F39840400EC59DB /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849921762F39840400EC59DB /* UILabel+Extensions.swift */; };
@@ -38,6 +46,16 @@
 		849921892F3B1D3300EC59DB /* HorizontalHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849921882F3B1D3300EC59DB /* HorizontalHeaderCell.swift */; };
 		8499218B2F3B258800EC59DB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499218A2F3B258800EC59DB /* DetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		842726C22F41653B0059E178 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 840385AE2F34F08E00245237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 840385B52F34F08E00245237;
+			remoteInfo = RedBox;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		840385B62F34F08E00245237 /* RedBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +79,15 @@
 		842726B32F3D16C10059E178 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		842726B62F3F231E0059E178 /* HeaderDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailCell.swift; sourceTree = "<group>"; };
 		842726B82F3F23410059E178 /* DescriptionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionDetailCell.swift; sourceTree = "<group>"; };
+		842726BE2F41653B0059E178 /* RedBoxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedBoxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		842726C02F41653B0059E178 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		842726C92F4179520059E178 /* MockHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeInteractor.swift; sourceTree = "<group>"; };
+		842726CB2F4179990059E178 /* MockHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeView.swift; sourceTree = "<group>"; };
+		842726CD2F4179B30059E178 /* MockHomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeRouter.swift; sourceTree = "<group>"; };
+		842726D12F417A110059E178 /* MockDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailInteractor.swift; sourceTree = "<group>"; };
+		842726D32F417A340059E178 /* MockDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailView.swift; sourceTree = "<group>"; };
+		842726D52F417A510059E178 /* MockDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDetailRouter.swift; sourceTree = "<group>"; };
+		842726D72F417A680059E178 /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 		849921702F39831C00EC59DB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		849921732F39837000EC59DB /* VerticalHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalHomeCell.swift; sourceTree = "<group>"; };
 		849921762F39840400EC59DB /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
@@ -82,6 +109,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842726BB2F41653B0059E178 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				840385B82F34F08E00245237 /* RedBox */,
+				842726BF2F41653B0059E178 /* RedBoxTests */,
 				840385B72F34F08E00245237 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				840385B62F34F08E00245237 /* RedBox.app */,
+				842726BE2F41653B0059E178 /* RedBoxTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +237,53 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		842726BF2F41653B0059E178 /* RedBoxTests */ = {
+			isa = PBXGroup;
+			children = (
+				842726C72F4179260059E178 /* HomeTests */,
+				842726CF2F4179F80059E178 /* DetailTests */,
+			);
+			path = RedBoxTests;
+			sourceTree = "<group>";
+		};
+		842726C72F4179260059E178 /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				842726C82F4179330059E178 /* Mocks */,
+				842726C02F41653B0059E178 /* HomePresenterTests.swift */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
+		842726C82F4179330059E178 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				842726CB2F4179990059E178 /* MockHomeView.swift */,
+				842726CD2F4179B30059E178 /* MockHomeRouter.swift */,
+				842726C92F4179520059E178 /* MockHomeInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		842726CF2F4179F80059E178 /* DetailTests */ = {
+			isa = PBXGroup;
+			children = (
+				842726D02F417A000059E178 /* Mocks */,
+				842726D72F417A680059E178 /* DetailPresenterTests.swift */,
+			);
+			path = DetailTests;
+			sourceTree = "<group>";
+		};
+		842726D02F417A000059E178 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				842726D32F417A340059E178 /* MockDetailView.swift */,
+				842726D52F417A510059E178 /* MockDetailRouter.swift */,
+				842726D12F417A110059E178 /* MockDetailInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		849921722F39835100EC59DB /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +362,24 @@
 			productReference = 840385B62F34F08E00245237 /* RedBox.app */;
 			productType = "com.apple.product-type.application";
 		};
+		842726BD2F41653B0059E178 /* RedBoxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842726C62F41653B0059E178 /* Build configuration list for PBXNativeTarget "RedBoxTests" */;
+			buildPhases = (
+				842726BA2F41653B0059E178 /* Sources */,
+				842726BB2F41653B0059E178 /* Frameworks */,
+				842726BC2F41653B0059E178 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842726C32F41653B0059E178 /* PBXTargetDependency */,
+			);
+			name = RedBoxTests;
+			productName = RedBoxTests;
+			productReference = 842726BE2F41653B0059E178 /* RedBoxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -291,6 +392,10 @@
 				TargetAttributes = {
 					840385B52F34F08E00245237 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					842726BD2F41653B0059E178 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 840385B52F34F08E00245237;
 					};
 				};
 			};
@@ -308,6 +413,7 @@
 			projectRoot = "";
 			targets = (
 				840385B52F34F08E00245237 /* RedBox */,
+				842726BD2F41653B0059E178 /* RedBoxTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +425,13 @@
 			files = (
 				840385C62F34F09100245237 /* LaunchScreen.storyboard in Resources */,
 				840385C32F34F09100245237 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842726BC2F41653B0059E178 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +473,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		842726BA2F41653B0059E178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842726C12F41653B0059E178 /* HomePresenterTests.swift in Sources */,
+				842726D22F417A110059E178 /* MockDetailInteractor.swift in Sources */,
+				842726CA2F4179520059E178 /* MockHomeInteractor.swift in Sources */,
+				842726D82F417A680059E178 /* DetailPresenterTests.swift in Sources */,
+				842726D42F417A340059E178 /* MockDetailView.swift in Sources */,
+				842726CC2F4179990059E178 /* MockHomeView.swift in Sources */,
+				842726D62F417A510059E178 /* MockDetailRouter.swift in Sources */,
+				842726CE2F4179B30059E178 /* MockHomeRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		842726C32F41653B0059E178 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 840385B52F34F08E00245237 /* RedBox */;
+			targetProxy = 842726C22F41653B0059E178 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		840385C42F34F09100245237 /* LaunchScreen.storyboard */ = {
@@ -548,6 +684,42 @@
 			};
 			name = Release;
 		};
+		842726C42F41653B0059E178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HG22Y54574;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AnnaSozontova.RedBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RedBox";
+			};
+			name = Debug;
+		};
+		842726C52F41653B0059E178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HG22Y54574;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AnnaSozontova.RedBoxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedBox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RedBox";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +737,15 @@
 			buildConfigurations = (
 				840385CB2F34F09100245237 /* Debug */,
 				840385CC2F34F09100245237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842726C62F41653B0059E178 /* Build configuration list for PBXNativeTarget "RedBoxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842726C42F41653B0059E178 /* Debug */,
+				842726C52F41653B0059E178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
