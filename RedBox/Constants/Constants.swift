@@ -32,7 +32,9 @@ struct Constants {
         static let masterCardDetailLabel = "Mastercard · 3356"
         static let cartVCTitleLabel = "Мои заказы"
         static let ohItIsEmptyLabel = "Ой, пусто!"
+        static let tadamLabel = "Та-дам!"
         static let areNoAddedProductsLabel = "Пока что нет добавленных товаров"
+        static let underDevelopmentLabel = "Пока что находится в разработке"
         static let goToTheMenuLabel = "Перейти в меню"
     }
     
@@ -46,6 +48,8 @@ struct Constants {
     struct Image {
         static let homeTabBarIcon = "house.fill"
         static let cartTabBarIcon = "cart.fill"
+        static let favoriteTabBarIcon = "suit.heart.fill"
+        static let settingsTabBarIcon = "square.grid.2x2.fill"
         static let sortImage = "chevron.down"
         static let backImage = "chevron.left"
         static let colorNormal = "circle.fill"
@@ -54,6 +58,7 @@ struct Constants {
         static let trashFillImage = "trash.fill"
         static let mastercardImage = "Mastercard"
         static let emptyCartImage = "EmptyCart"
+        static let emptyStateImage = "EmptyState"
     }
     
     struct Size {

@@ -20,7 +20,7 @@ final class CartRouter: CartRouterProtocol {
         view.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: Constants.Image.cartTabBarIcon),
-            tag: 1
+            tag: 2
         )
         
         return UINavigationController(rootViewController: view)
