@@ -6,8 +6,7 @@ extension UIButton {
         font: UIFont = Typography.smallBold.font,
         background: UIColor = .ypBlack,
         textColor: UIColor = .ypWhite,
-        cornerRaduis: CGFloat = 15,
-        height: CGFloat = Constants.Size.heightBlackButton
+        cornerRaduis: CGFloat = 15
     ) {
         self.setTitle(text, for: .normal)
         self.titleLabel?.font = font
@@ -15,11 +14,10 @@ extension UIButton {
         self.backgroundColor = background
         self.clipsToBounds = true
         self.layer.cornerRadius = cornerRaduis
-        self.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
     func configureCounterButton(
-        text: String,
+        text: String?,
         font: UIFont = Typography.bold.font,
         textColor: UIColor = .ypBlack,
         borderColor: UIColor = .ypBlack,

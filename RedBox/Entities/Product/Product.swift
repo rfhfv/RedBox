@@ -35,7 +35,7 @@ enum HeadphoneModel: String, CaseIterable {
         switch self {
         case .airpods: return "AirPods Max"
         case .beats:  return "Beats Solo 4"
-        case .backbeat: return "Plantronics BACKBEAT 810"
+        case .backbeat: return "Plantronics"
         case .vidnie: return "Vidvie"
         case .seven:  return "X-Seven Wireless"
         }

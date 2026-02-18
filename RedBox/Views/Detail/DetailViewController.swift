@@ -54,6 +54,21 @@ extension DetailViewController: DetailViewProtocol {
     }
     
     func updateColor(_ color: String) { }
+    
+    func showAddToCartAlert() {
+        let alert = UIAlertController(
+            title: Constants.Alert.notification,
+            message: Constants.Alert.productSuccessfullyAddedToCart,
+            preferredStyle: .alert
+        )
+        
+        let okAction = UIAlertAction(title: Constants.Alert.ok, style: .default)
+        
+        alert.view.tintColor = .ypDarkGray
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
 }
 
 extension DetailViewController: HeaderDetailCellDelegate {

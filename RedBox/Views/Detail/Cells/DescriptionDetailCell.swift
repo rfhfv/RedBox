@@ -50,7 +50,7 @@ final class DescriptionDetailCell: UITableViewCell {
         label.configureStyle(
             font: Typography.light.font,
             textColor: .ypDarkGray)
-        label.text = Constants.String.headphones
+        label.text = Constants.String.headphonesLabel
         return label
     }()
     
@@ -198,12 +198,12 @@ private extension DescriptionDetailCell {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            mainStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            mainStack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 25),
             mainStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             mainStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             mainStack.heightAnchor.constraint(equalToConstant: 70),
             
-            priceStackView.topAnchor.constraint(equalTo: mainStack.bottomAnchor, constant: 10),
+            priceStackView.topAnchor.constraint(equalTo: mainStack.bottomAnchor, constant: 25),
             priceStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             priceStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             priceStackView.heightAnchor.constraint(equalToConstant: 40),
@@ -215,7 +215,8 @@ private extension DescriptionDetailCell {
             buyButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 25),
             buyButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             buyButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            buyButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25)
+            buyButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -25),
+            buyButton.heightAnchor.constraint(equalToConstant: 80)
         ])
     }
 }

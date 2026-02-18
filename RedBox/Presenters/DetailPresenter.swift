@@ -37,7 +37,18 @@ final class DetailPresenter: DetailPresenterProtocol {
         view?.updateColor(newColor)
     }
     
-    func buyButtonTapped() { }
+    func buyButtonTapped() {
+        let product = interactor.product
+        let quantity = interactor.currentQuantity
+        
+        let cartItem = CartItem(product: product, quantity: quantity)
+        CartManager.shared.addItem(cartItem)
+        
+        view?.showAddToCartAlert()
+    }
+    
+    func goToCart() {
+    }
 }
 
 private extension DetailPresenter {

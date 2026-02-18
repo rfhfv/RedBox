@@ -20,6 +20,7 @@ protocol DetailPresenterProtocol: AnyObject {
     func minusButtonTapped()
     func colorSelected(_ color: String)
     func buyButtonTapped()
+    func goToCart()
 }
 
 protocol DetailViewProtocol: AnyObject {
@@ -27,6 +28,7 @@ protocol DetailViewProtocol: AnyObject {
     func updateQuantity(_ quantity: Int)
     func updatePrice(_ price: String)
     func updateColor(_ color: String)
+    func showAddToCartAlert()
 }
 
 protocol DescriptionDetailCellDelegate: AnyObject {

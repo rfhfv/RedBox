@@ -97,7 +97,7 @@ private extension HomeView {
     func createVerticalSection() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(470)
+            heightDimension: .absolute(450)
         )
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -105,7 +105,7 @@ private extension HomeView {
         
         let groupSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
-            heightDimension: .absolute(470)
+            heightDimension: .absolute(450)
         )
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])

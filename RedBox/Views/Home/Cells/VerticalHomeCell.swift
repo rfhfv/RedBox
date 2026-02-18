@@ -63,12 +63,12 @@ private extension VerticalHomeCell {
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 48),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 18),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -18),
-            imageView.heightAnchor.constraint(equalToConstant: 290),
+            imageView.heightAnchor.constraint(equalToConstant: 280),
             
-            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 28),
+            stackView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 34),
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 18),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -18),
-            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -38),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32),
             
             titleLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor),
