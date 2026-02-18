@@ -82,7 +82,14 @@ final class DetailPresenterTests: XCTestCase {
         XCTAssertEqual(mockInteractor.currentQuantity, 1)
     }
     
-    func testColorSelectedChangescolor(_ color: String) { }
+    func testBuyButtonTapped() {
+        // When
+        sut.viewDidLoad()
+        sut.buyButtonTapped()
+        
+        // Then
+        XCTAssertTrue(mockView.isShowAddToCartAlertCalled)
+    }
     
-    func testBuyButtonTappedGoToPayScreen() { }
+    func testColorSelectedChangescolor(_ color: String) { }
 }

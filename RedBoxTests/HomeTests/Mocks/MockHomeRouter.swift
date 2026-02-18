@@ -3,7 +3,6 @@ import XCTest
 
 final class MockHomeRouter: HomeRouterProtocol {
     var isShowDetailsCalled = false
-    var isCreateModulCalled = false
     var receivedProduct: ProductDTO?
     
     static func createModule() -> UIViewController {

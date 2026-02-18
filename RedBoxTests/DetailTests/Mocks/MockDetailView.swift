@@ -6,6 +6,7 @@ final class MockDetailView: DetailViewProtocol {
     var isUpdateQuantityCalled = false
     var isUpdatePriceCalled = false
     var isUpdateColorCalled = false
+    var isShowAddToCartAlertCalled = false
     
     var receivedProduct: ProductDTO?
     var receivedQuantity: Int?
@@ -30,5 +31,9 @@ final class MockDetailView: DetailViewProtocol {
     func updateColor(_ color: String) {
         isUpdateColorCalled = true
         receivedColor = color
+    }
+    
+    func showAddToCartAlert() {
+        isShowAddToCartAlertCalled = true
     }
 }

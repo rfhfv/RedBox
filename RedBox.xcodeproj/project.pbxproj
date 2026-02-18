@@ -46,6 +46,10 @@
 		842726EA2F41C1500059E178 /* ProductCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842726E92F41C1500059E178 /* ProductCartCell.swift */; };
 		8465E1D92F45B699001BA5C6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1D82F45B699001BA5C6 /* SettingsViewController.swift */; };
 		8465E1DB2F45B6A3001BA5C6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1DA2F45B6A3001BA5C6 /* SettingsView.swift */; };
+		8465E1DF2F45BC18001BA5C6 /* CartPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1DE2F45BC18001BA5C6 /* CartPresenterTests.swift */; };
+		8465E1E12F45C2BA001BA5C6 /* MockCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1E02F45C2BA001BA5C6 /* MockCartView.swift */; };
+		8465E1E32F45C2CF001BA5C6 /* MockCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1E22F45C2CF001BA5C6 /* MockCartInteractor.swift */; };
+		8465E1E52F45C2E5001BA5C6 /* MockCartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465E1E42F45C2E5001BA5C6 /* MockCartRouter.swift */; };
 		849752462F4416F50009D88A /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752452F4416F50009D88A /* CartView.swift */; };
 		849752482F4420720009D88A /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752472F4420720009D88A /* UIView + Extensions.swift */; };
 		8497524A2F445A2B0009D88A /* PaymentCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849752492F445A2B0009D88A /* PaymentCartCell.swift */; };
@@ -118,6 +122,10 @@
 		842726E92F41C1500059E178 /* ProductCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartCell.swift; sourceTree = "<group>"; };
 		8465E1D82F45B699001BA5C6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8465E1DA2F45B6A3001BA5C6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8465E1DE2F45BC18001BA5C6 /* CartPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenterTests.swift; sourceTree = "<group>"; };
+		8465E1E02F45C2BA001BA5C6 /* MockCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCartView.swift; sourceTree = "<group>"; };
+		8465E1E22F45C2CF001BA5C6 /* MockCartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCartInteractor.swift; sourceTree = "<group>"; };
+		8465E1E42F45C2E5001BA5C6 /* MockCartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCartRouter.swift; sourceTree = "<group>"; };
 		849752452F4416F50009D88A /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		849752472F4420720009D88A /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		849752492F445A2B0009D88A /* PaymentCartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCartCell.swift; sourceTree = "<group>"; };
@@ -203,11 +211,11 @@
 		840385CE2F38902000245237 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8465E1D72F45B685001BA5C6 /* Settings */,
-				849752542F45A1650009D88A /* Favorite */,
 				849921722F39835100EC59DB /* Home */,
 				849921812F3AC5D400EC59DB /* Detail */,
 				842726DB2F4186FA0059E178 /* Cart */,
+				849752542F45A1650009D88A /* Favorite */,
+				8465E1D72F45B685001BA5C6 /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +294,7 @@
 			children = (
 				842726C72F4179260059E178 /* HomeTests */,
 				842726CF2F4179F80059E178 /* DetailTests */,
+				8465E1DC2F45BBAF001BA5C6 /* CartTests */,
 			);
 			path = RedBoxTests;
 			sourceTree = "<group>";
@@ -356,6 +365,25 @@
 				8465E1D82F45B699001BA5C6 /* SettingsViewController.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		8465E1DC2F45BBAF001BA5C6 /* CartTests */ = {
+			isa = PBXGroup;
+			children = (
+				8465E1DD2F45BBF6001BA5C6 /* Mocks */,
+				8465E1DE2F45BC18001BA5C6 /* CartPresenterTests.swift */,
+			);
+			path = CartTests;
+			sourceTree = "<group>";
+		};
+		8465E1DD2F45BBF6001BA5C6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8465E1E02F45C2BA001BA5C6 /* MockCartView.swift */,
+				8465E1E22F45C2CF001BA5C6 /* MockCartInteractor.swift */,
+				8465E1E42F45C2E5001BA5C6 /* MockCartRouter.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		8497524B2F445B390009D88A /* Headers */ = {
@@ -605,13 +633,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8465E1E12F45C2BA001BA5C6 /* MockCartView.swift in Sources */,
 				842726C12F41653B0059E178 /* HomePresenterTests.swift in Sources */,
 				842726D22F417A110059E178 /* MockDetailInteractor.swift in Sources */,
 				842726CA2F4179520059E178 /* MockHomeInteractor.swift in Sources */,
+				8465E1E52F45C2E5001BA5C6 /* MockCartRouter.swift in Sources */,
 				842726D82F417A680059E178 /* DetailPresenterTests.swift in Sources */,
+				8465E1DF2F45BC18001BA5C6 /* CartPresenterTests.swift in Sources */,
 				842726D42F417A340059E178 /* MockDetailView.swift in Sources */,
 				842726CC2F4179990059E178 /* MockHomeView.swift in Sources */,
 				842726D62F417A510059E178 /* MockDetailRouter.swift in Sources */,
+				8465E1E32F45C2CF001BA5C6 /* MockCartInteractor.swift in Sources */,
 				842726CE2F4179B30059E178 /* MockHomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
