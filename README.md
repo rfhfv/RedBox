@@ -1,44 +1,50 @@
-## **RedBox**
+# RedBox App
 
-RedBox — это iOS-приложение для онлайн-покупок. 
+An iOS online shopping app built with Swift and UIKit.  
+The app features a product catalog with recommendations, detailed product view, and a shopping cart with quantity adjustment. It follows the VIPER architecture and includes unit tests for presenters with mocked dependencies.
 
-В приложении реализован каталог продукции, детальный просмотр и корзина с возможностью удаления товаров.
-
-## **Описание приложения**
-Приложение представляет собой каталог продукции с несколькими экранами:
-
-- Главный экран — список товаров и рекомендаций
-
-- Детальный экран — подробная информация о товаре 
-
-- Корзина — просмотр добавленных товаров с возможностью удаления
+## Screenshots
 
 <img width="3679" height="2564" alt="Image" src="https://github.com/user-attachments/assets/49f489f8-8c8d-45e7-8721-24969b139276" />
 
-## **Архитектура**
+## Features
 
-VIPER
+- **Product Catalog:** Browse a list of products with personalized recommendations.
+- **Product Details:** View detailed information about any product.
+- **Shopping Cart:** Add products, adjust quantities, and remove items from the cart.
 
-## **Функциональность**
+## Tech Stack
 
-- Просмотр каталога продукции
+- **UIKit** with programmatic Auto Layout
+- **VIPER** architectural pattern
+- **Unit Tests** for Presenter layer
+- **Mocks** for all dependencies
 
-- Детальная информация о товаре
+## Architecture
 
-- Изменение количества товара
+The project follows the **VIPER (View-Interactor-Presenter-Entity-Router)** pattern:
 
-- Добавление и удаление товара в корзине
+- **View:** UIKit ViewControllers. Displays data and forwards user actions to the Presenter.
+- **Interactor:** Contains business logic and data management.
+- **Presenter:** Prepares data for the View and handles user interactions.
+- **Entity:** Simple data models.
+- **Router:** Handles navigation between screens.
 
-## **Тесты**
+## Tests
 
-- Unit-тесты для Presenter'ов
+- Unit tests covering Presenter logic.
+- All dependencies are mocked to ensure isolated and reliable tests.
 
-- Моки для всех зависимостей
+## Roadmap
 
-## **Планы по развитию**
+- Add network layer with URLSession.
+- Implement cart persistence between launches using Core Data.
+- Add Favorites and Settings screens.
 
-- Добавление сетевого слоя (URLSession)
+## Installation
 
-- Сохранение корзины между запусками (Core Data)
+**Via terminal:**
 
-- Экран избранного и настроек
+- git clone https://github.com/rfhfv/RedBox.git
+- cd RedBox
+- open RedBox.xcodeproj
