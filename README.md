@@ -5,7 +5,7 @@ The app features a product catalog with recommendations, detailed product view, 
 
 ## Screenshots
 
-<img width="2627" height="1500" alt="Image" src="https://github.com/user-attachments/assets/bd3cfd30-28b0-4f77-b914-24841faa2d73" />
+<img width="1300" height="784" alt="Image" src="https://github.com/user-attachments/assets/6be76479-4fc8-4492-90db-922b89ab49f0" />
 
 ## Features
 
